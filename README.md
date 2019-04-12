@@ -1,6 +1,6 @@
 ## TodoMVC (REACT)
 
-Simple React To-Do List application.
+React To-Do List application.
 
 ### Resources
 
