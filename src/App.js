@@ -23,6 +23,8 @@ class App extends Component {
       return
     }
     else {
+      // trims to-do text
+      this.state.newTodo.text.trim()
       updatedTodos.push(this.state.newTodo)
       this.setState({
         todos: updatedTodos,
