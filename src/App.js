@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AddForm from './components/AddForm';
+import ToDoList from './components/ToDoList';
 
 class App extends Component {
 
@@ -49,16 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <AddForm setNewTodo={this.setNewTodo} addTodo={this.addTodo} state={this.state} />
-        {/* <h1>To-Do List</h1>
-        <div className="new-item">
-          <input type="text" className="new-item-input" value={this.state.newTodo} onChange={(e)=>{this.setNewTodo(e)}}/>
-          <button type="button" className="add-button" onClick={(e)=>{this.addTodo(e)}}>+</button>
-        </div> */}
-
-        <div className="todo-list">
-          {this.displayTodos()}
-        </div>
-
+        <ToDoList state={this.state} displayTodos={this.displayTodos} deleteTodo={this.deleteTodo} />
       </div>
     );
   }
