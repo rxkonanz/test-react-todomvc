@@ -1,8 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## TodoMVC (REACT)
 
 Simple React To-Do List application.
 
+### Resources
+
+* [Website](https://test-react-todomvc.herokuapp.com/)
+
+### Implementation
+
+The application was created with the React.js framework. It is a front-end only application that has a parent (App.js) and three child components (AddForm, Counter, ToDoList).
+
 ### Credit
+
 Created by [Roberto Konanz](https://github.com/rxkonanz) 
