@@ -18,11 +18,17 @@ class App extends Component {
   // function that adds new to-do to list
   addTodo = (e) => {
     let updatedTodos = [...this.state.todos]
-    updatedTodos.push(this.state.newTodo)
-    this.setState({
-      todos: updatedTodos,
-      newTodo: {completed: false, text: ""}
-    })
+    if(this.state.newTodo.text === ""){
+      alert("No empty To-Do's allowed!")
+      return
+    }
+    else {
+      updatedTodos.push(this.state.newTodo)
+      this.setState({
+        todos: updatedTodos,
+        newTodo: {completed: false, text: ""}
+      })
+    }
   }
 
   // function that deletes to-do at index i from list
