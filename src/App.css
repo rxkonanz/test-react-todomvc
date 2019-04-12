@@ -23,50 +23,82 @@
   color: #61dafb;
 }
 
-.completed-box {
-  margin-top: 7px;
+.completed-checkbox {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.completed-list-item {
+  border: 1px solid black;
+  display: flex;
+  font-style: italic;
+  height: 36px;
+  margin: 5%;
+  text-decoration: line-through;
+  width: 290px;
 }
 
 .delete-button {
   background-color: red;
+  border: 0;
   right: 0;
-  height: 24px;
-  width: 24px;
+  height: 36px;
+  width: 36px;
 }
 
 .list-item {
+  border: 1px solid black;
   display: flex;
-  margin-bottom: 20px;
-  height: 20px;
-  width: 200px;
+  height: 36px;
+  margin: 5%;
+  text-decoration: none;
+  width: 290px;
 }
 
 .list-item-text {
   margin: 0;
-  padding-top: 4px;
-  width: 160px;
+  padding-top: 8px;
+  margin-right: 1px;
+  width: 227px;
 }
 
 .new-item {
   display: flex;
-  margin: 0 auto 30px auto;
-  width: 200px;
+  margin: 0 auto 20px auto;
+  width: 320px;
 }
 
 .new-item-input {
+  border: 1px solid black;
   padding: 0;
-  width: 160px;
+  width: 284px;
+}
+
+.new-item-input::placeholder {
+  text-align: center;
+}
+
+.no-show {
+  display: none;
+}
+
+#plus-sign {
+  color: white;
+  font-size: 25px;
+  margin-top: 0;
 }
 
 .todo-list {
+  border: 1px solid black;
   margin: 0 auto;
-  width: 200px;
+  width: 320px;
 }
 
 .add-button {
   background-color: green;
-  height: 24px;
-  width: 24px;
+  border: 1px solid green;
+  height: 36px;
+  width: 36px;
 }
 
 @keyframes App-logo-spin {

@@ -7,8 +7,8 @@ export default class AddForm extends Component {
             <Fragment>
             <h1>To-Do List</h1>
             <div className="new-item">
-              <input type="text" className="new-item-input" value={this.props.state.newTodo} onChange={(e)=>{this.props.setNewTodo(e)}}/>
-              <button type="button" className="add-button" onClick={(e)=>{this.props.addTodo(e)}}>+</button>
+              <input type="text" placeholder="New" className="new-item-input" value={this.props.state.newTodo.text} onChange={(e)=>{this.props.setNewTodo(e)}}/>
+              <button type="button" className="add-button" onClick={(e)=>{this.props.addTodo(e)}}><p id="plus-sign">+</p></button>
             </div>
             </Fragment>
         )
