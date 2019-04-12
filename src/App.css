@@ -23,6 +23,52 @@
   color: #61dafb;
 }
 
+.completed-box {
+  margin-top: 7px;
+}
+
+.delete-button {
+  background-color: red;
+  right: 0;
+  height: 24px;
+  width: 24px;
+}
+
+.list-item {
+  display: flex;
+  margin-bottom: 20px;
+  height: 20px;
+  width: 200px;
+}
+
+.list-item-text {
+  margin: 0;
+  padding-top: 4px;
+  width: 160px;
+}
+
+.new-item {
+  display: flex;
+  margin: 0 auto 30px auto;
+  width: 200px;
+}
+
+.new-item-input {
+  padding: 0;
+  width: 160px;
+}
+
+.todo-list {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.add-button {
+  background-color: green;
+  height: 24px;
+  width: 24px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
