@@ -1,4 +1,3 @@
-import App from '../App';
 import React, {Component, Fragment} from 'react';
 
 export default class AddForm extends Component {

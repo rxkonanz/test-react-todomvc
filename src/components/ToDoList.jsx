@@ -1,5 +1,4 @@
-import App from '../App';
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 
 export default class ToDoList extends Component {
     

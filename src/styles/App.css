@@ -23,6 +23,13 @@
   color: #61dafb;
 }
 
+.add-button {
+  background-color: green;
+  border: 1px solid green;
+  height: 36px;
+  width: 36px;
+}
+
 .completed-checkbox {
   margin-top: 12px;
   margin-left: 12px;
@@ -93,13 +100,6 @@
   border: 1px solid black;
   margin: 0 auto;
   width: 320px;
-}
-
-.add-button {
-  background-color: green;
-  border: 1px solid green;
-  height: 36px;
-  width: 36px;
 }
 
 @keyframes App-logo-spin {
