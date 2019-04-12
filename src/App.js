@@ -15,6 +15,7 @@ class App extends Component {
     }
   }
 
+  // function that adds new to-do to list
   addTodo = (e) => {
     let updatedTodos = [...this.state.todos]
     updatedTodos.push(this.state.newTodo)
@@ -24,6 +25,7 @@ class App extends Component {
     })
   }
 
+  // function that deletes to-do at index i from list
   deleteTodo = (i) => {
     let shorterTodos = [...this.state.todos]
     shorterTodos.splice(i, 1)
@@ -32,18 +34,7 @@ class App extends Component {
     })
   }
 
-  completeTodo = (i) => {
-    let updatedTodos = [...this.state.todos]
-    if(this.state.todos[i].completed === true){
-      updatedTodos[i].completed = false
-    }else {
-      updatedTodos[i].completed = true
-    }
-    this.setState({
-      todos: updatedTodos
-    })
-  }
-
+  // function that displays all the todos in the to-do list
   displayTodos = () => {
     let todoList = this.state.todos.map((todo, i) => {
       const btnClass = this.state.isHovered ? "delete-button" : "no-show";
@@ -56,24 +47,41 @@ class App extends Component {
     return todoList
   }
 
+  // function that handles when a todo is completed
+  completeTodo = (i) => {
+    let updatedTodos = [...this.state.todos]
+    if(this.state.todos[i].completed === true){
+      updatedTodos[i].completed = false
+    }else {
+      updatedTodos[i].completed = true
+    }
+    this.setState({
+      todos: updatedTodos
+    })
+  }
+
+  // function that handles hover
   handleHover = () => {
     this.setState({
       isHovered: true
     })
   }
 
+  // function that handles unhover
   handleUnHover = () => {
     this.setState({
       isHovered: false
     })
   }
 
+  // function that handles text input from new to-do
   setNewTodo = (e) => {
     this.setState({
       newTodo: {completed: false, text: e.target.value}  
     })
   }
 
+  // renders app
   render() {
     return (
       <div className="App">
