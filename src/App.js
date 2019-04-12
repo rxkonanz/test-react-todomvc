@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import AddForm from './components/AddForm';
 import Counter from './components/Counter';
 import ToDoList from './components/ToDoList';
@@ -73,6 +73,10 @@ class App extends Component {
     })
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
   // function that handles unhover
   handleUnHover = () => {
     this.setState({
@@ -91,7 +95,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AddForm setNewTodo={this.setNewTodo} addTodo={this.addTodo} state={this.state} />
+        <AddForm setNewTodo={this.setNewTodo} addTodo={this.addTodo} handleSubmit={this.handleSubmit} state={this.state} />
         <ToDoList state={this.state} displayTodos={this.displayTodos} deleteTodo={this.deleteTodo} />
         <Counter state={this.state} todos={this.state.todos} />
       </div>
