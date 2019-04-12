@@ -47,7 +47,7 @@ class App extends Component {
   displayTodos = () => {
     let todoList = this.state.todos.map((todo, i) => {
       const btnClass = this.state.isHovered ? "delete-button" : "no-show";
-      return  <div className= { this.state.todos[i].completed ? "completed-list-item" : "list-item" } key={i} onMouseEnter={this.handleHover} onMouseLeave={this.handleUnHover}>
+      return  <div className= {this.state.todos[i].completed ? "completed-list-item" : "list-item"} key={i} onMouseEnter={this.handleHover} onMouseLeave={this.handleUnHover}>
                 <input type="checkbox" className="completed-checkbox" onClick={()=>{this.completeTodo(i)}}/>
                 <p className="list-item-text">{todo.text}</p>
                 <button type="button" className={btnClass} onClick={()=>{this.deleteTodo(i)}}>X</button>

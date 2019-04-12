@@ -75,6 +75,7 @@
 }
 
 .new-item-input::placeholder {
+  color: black;
   text-align: center;
 }
 

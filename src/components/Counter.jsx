@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 
 export default class Counter extends Component {
-    
+
     showCounter = () => {
 
         let incompleteTodos = 0
@@ -15,7 +15,7 @@ export default class Counter extends Component {
 
         // console.log(this.props.todos)
         if(incompleteTodos === 0){
-            return <Fragment><p>No To-Dos Left!</p></Fragment>
+            return <Fragment><p>No To-Dos</p></Fragment>
         }
         if(incompleteTodos === 1){
             return <Fragment><p><b>{incompleteTodos}</b> To-Do left</p></Fragment>
