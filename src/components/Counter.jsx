@@ -17,13 +17,13 @@ export default class Counter extends Component {
 
         // conditions to render correct counter text
         if(incompleteTodos === 0){
-            return <Fragment><p>No To-Dos</p></Fragment>
+            return <Fragment><p className={this.props.state.todos.length > 0 ? "" : "no-show"}>No To-Do's left</p></Fragment>
         }
         if(incompleteTodos === 1){
-            return <Fragment><p><b>{incompleteTodos}</b> To-Do left</p></Fragment>
+            return <Fragment><p className={this.props.state.todos.length > 0 ? "" : "no-show"}><b>{incompleteTodos}</b> To-Do left</p></Fragment>
         }
         if(incompleteTodos > 1){
-            return <Fragment><p><b>{incompleteTodos}</b> To-Dos left</p></Fragment>
+            return <Fragment><p className={this.props.state.todos.length > 0 ? "" : "no-show"}><b>{incompleteTodos}</b> To-Do's left</p></Fragment>
         }
     }
     

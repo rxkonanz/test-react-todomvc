@@ -38,7 +38,7 @@ class App extends Component {
   displayTodos = () => {
     let todoList = this.state.todos.map((todo, i) => {
       const btnClass = this.state.isHovered ? "delete-button" : "no-show";
-      return  <div className= {this.state.todos[i].completed ? "completed-list-item" : "list-item"} key={i} onMouseEnter={this.handleHover} onMouseLeave={this.handleUnHover}>
+      return  <div className={this.state.todos[i].completed ? "completed-list-item" : "list-item"} key={i} onMouseEnter={this.handleHover} onMouseLeave={this.handleUnHover}>
                 <input type="checkbox" className="completed-checkbox" onClick={()=>{this.completeTodo(i)}}/>
                 <p className="list-item-text">{todo.text}</p>
                 <button type="button" className={btnClass} onClick={()=>{this.deleteTodo(i)}}>X</button>
@@ -87,7 +87,7 @@ class App extends Component {
       <div className="App">
         <AddForm setNewTodo={this.setNewTodo} addTodo={this.addTodo} state={this.state} />
         <ToDoList state={this.state} displayTodos={this.displayTodos} deleteTodo={this.deleteTodo} />
-        <Counter todos={this.state.todos} />
+        <Counter state={this.state} todos={this.state.todos} />
       </div>
     );
   }
